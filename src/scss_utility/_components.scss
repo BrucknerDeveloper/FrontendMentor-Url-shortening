@@ -1,0 +1,52 @@
+//typography
+//color
+.text-white {
+    color: $clr-white;
+}
+
+.text-dark {
+    color: $clr-veryDark-blue;
+}
+
+.text-light {
+    color: $clr-grayish-violet;
+}
+
+//weight
+.bold {
+    font-weight: $fw-700;
+}
+
+//font-size {
+.fs-h1 {
+    font-size: $fs-h1;
+}
+
+.fs-h2 {
+    font-size: $fs-h2;
+}
+
+.fs-h3 {
+    font-size: $fs-h3;
+}
+
+.fs-regular {
+    font-size: $fs-regular;    
+}
+
+//buttons
+.btn {
+    background-color: $clr-cyan;
+    color: $clr-white;
+    text-align: center;
+    padding: .65em 1.5em;
+    font-weight: $fw-700;
+}
+
+.btn--slightly-round {
+    border-radius: .5em;
+}
+
+.btn--round {
+    border-radius: 50px;
+}

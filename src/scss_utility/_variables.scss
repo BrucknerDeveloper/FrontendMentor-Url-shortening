@@ -1,16 +1,16 @@
 // --- CUSTOM VARIABLES ---
 //colors
 $clr-cyan: hsl(180, 66%, 49%);
-$clr-dark-violet: hsl(257, 27%, 26%)
-;
+$clr-dark-violet: hsl(257, 27%, 26%);
 $clr-red: hsl(0, 87%, 67%);
 $clr-gray: hsl(0, 0%, 75%);
 $clr-grayish-violet: hsl(257, 7%, 63%);
 $clr-veryDark-blue: hsl(255, 11%, 22%);
 $clr-veryDark-violet: hsl(260, 8%, 14%);
+$clr-white: hsl(0, 0%, 100%);
 
 //font-sizes
-$fs-regular: 18px;
+$fs-regular: 16px;
 $fs-h1: 2rem;
 $fs-h2: 1.5rem;
 $fs-h3: 1.25rem;
@@ -21,3 +21,10 @@ $ff-poppins: 'Poppins', sans-serif;
 //font-weights
 $fw-500: 500;
 $fw-700:  700;
+
+//padding
+$main-padding-block: 2rem;
+$main-padding-inline: 1rem;
+
+//border-radius
+$border-radius-regular: 7px;

@@ -2,5 +2,6 @@
 @import "./scss_utility/variables", "./scss_utility/resets", "./scss_utility/components";
 
 //components
-@import "./App.scss"
-
+@import "./App.scss";
+@import "./components/Header/Header.scss";
+@import "./components/Home/Intro/Intro.scss"
