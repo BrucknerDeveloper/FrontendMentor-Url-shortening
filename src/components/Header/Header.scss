@@ -1,5 +1,5 @@
 .header {
-    padding: $main-padding-block $main-padding-inline;
+    padding: $main-padding-block $main-padding-inline 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,14 +11,15 @@
 }
 
 .header__menu { 
+    z-index: 100;
     position: absolute;
     top: calc(80px);
     width: auto;
-    left: 1rem;
-    right: 1rem;
+    left: 16px;
+    right: 16px;
     background-color: $clr-dark-violet;
     border-radius: $border-radius-regular;
-    padding: 2rem;
+    padding: 32px;
 
     & .header__nav {
         display: flex;
@@ -28,7 +29,7 @@
         
 
         & .header__nav-item {
-            padding-bottom: 1.5rem;
+            padding-bottom: 24px;
         }
     }
 
@@ -43,7 +44,7 @@
         
         & .btn--login {
             color: $clr-white;
-            padding: 1.5rem 1rem;
+            padding: 24px 16px;
             background-color: inherit;
         }
     }  

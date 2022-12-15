@@ -20,31 +20,46 @@
 //font-size {
 .fs-h1 {
     font-size: $fs-h1;
+    letter-spacing: -1px;
+
 }
 
 .fs-h2 {
     font-size: $fs-h2;
+    letter-spacing: -1px;
 }
 
 .fs-h3 {
     font-size: $fs-h3;
+    letter-spacing: -1px;
 }
 
 .fs-regular {
     font-size: $fs-regular;    
 }
 
+//letter-spacing
+
+.letter-space-text {
+    letter-spacing: .5px;
+}
+
+.letter-space-title {
+    letter-spacing: -1px;
+}
+
 //buttons
 .btn {
+    display: block;
     background-color: $clr-cyan;
     color: $clr-white;
     text-align: center;
-    padding: .65em 1.5em;
+    padding: 10px 24px;
     font-weight: $fw-700;
 }
 
 .btn--slightly-round {
-    border-radius: .5em;
+    border-radius: 8px;
 }
 
 .btn--round {

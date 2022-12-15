@@ -1,0 +1,25 @@
+.shortening {
+   margin: 0 $main-padding-inline 64px;
+}
+
+.shortening-container {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    margin: auto;
+    max-width: 400px;
+    background-color: $clr-dark-violet;
+    background-image: url("/src/assets/bg-shorten-desktop.svg");
+    border-radius: $border-radius-regular;
+    flex-direction: column;
+
+    .shortening__input {
+        padding: 16px;
+        border-radius: $border-radius-regular;
+    }
+    
+    .shortening__submit {
+        padding: 16px;
+        background-color: $clr-cyan;
+    }
+}

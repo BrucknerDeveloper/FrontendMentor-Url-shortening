@@ -6,7 +6,7 @@ import Statistic from "./Statistic/Statistic"
 export default function AdvancedStatistics() {
 
     return (
-        <div>
+        <section>
             <h2>Advanced Settings</h2>
             <p>Track how your linksare performing across the web with our advanced statistics clashboard.</p>
             <div>
@@ -14,6 +14,6 @@ export default function AdvancedStatistics() {
                 <Statistic />
                 <Statistic />
             </div>
-        </div>
+        </section>
     )
 }
