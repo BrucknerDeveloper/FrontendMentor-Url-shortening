@@ -1,45 +1,104 @@
 .intro {
-    padding: $main-padding-inline;
+    margin: $main-margin-block $main-margin-inline 72px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .intro__container-text {
     order: 2;
     max-width: 350px;
-    margin: auto;
-}
+    margin: min(100vw, 450px) auto 0;
 
-.intro__title {
-    letter-spacing: -1px;
-    line-height: calc($fs-h1 + 5px);
-    width: 90%;
-    margin: auto;
-    text-align: center;
-    margin-bottom: 12px;
-}
+    & .intro__title {
+        letter-spacing: -1px;
+        line-height: calc($fs-h1 + 5px);
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    
+    & .intro__text {
+        text-align: center;
+        margin-bottom: 24px;
+    }
 
-.intro__text {
-    text-align: center;
-    margin-bottom: 24px;
-}
-
-.intro__btn {
-    margin: auto;
-}
-
-.intro__container-img {
-    order: 1;
-    width: 100vw;
-    position: relative;
-    margin-bottom: 32px;
-    overflow-x: hidden;
-    margin-left: -16px; //counter padding
+    & .intro__btn {
+        margin: auto;
+    }
 }
 
 .intro__img {
-    display: block;
+    order: 1;
+    position: absolute;
     width: 125vw;
     max-width: 600px;
-    margin-left: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: min(20%, 65px);
+}
+
+@media (min-width: 600px) {
+    .intro__img {
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: $mq-tablet) {
+    .intro {
+        margin: calc($main-margin-block * 3) calc($main-margin-inline + 5vw) 72px;
+    }
+
+    .intro__container-text {
+        order: 1;
+        max-width: 475px;
+        width: 50vw;
+        margin: auto 0;
+        padding-right: 10px;
+
+        & .intro__title {
+            width: 100%;
+            text-align: left;
+            line-height: 1.1em;
+        }
+        
+        & .intro__text {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+
+        & .intro__btn {
+            margin: 0;
+        }
+    }
+
+    .intro__img {
+        max-width: 600px;
+        width: 50vw;
+        right: max(-40vw, -700px);
+        left: initial;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media(min-width: $mq-laptop) {
+    .intro {
+        margin-bottom: 124px;
+    }
+    .intro__img {
+        right: -450px;
+    }
+}
+
+@media(min-width: $mq-desktop) {
+    .intro {
+        max-width: $max-width-desktop;
+        margin-inline: auto;
+    }
+
+    .intro__img {
+        right: -250px;
+    }
 }

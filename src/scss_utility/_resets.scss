@@ -20,6 +20,15 @@ li {
 button {
     font: inherit;
     border: none;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 img {

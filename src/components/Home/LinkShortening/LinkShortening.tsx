@@ -15,10 +15,11 @@ export default function LinkShortening() {
                 />
                 <button 
                 className="shortening__submit 
+                    btn
+                    btn--slightly-round
                     text-white 
                     bold 
-                    fs-regular 
-                    letter-space-text"
+                    fs-regular"
                 >
                     Shorten It!
                 </button>

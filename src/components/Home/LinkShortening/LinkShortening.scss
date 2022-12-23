@@ -1,5 +1,19 @@
 .shortening {
-   margin: 0 $main-padding-inline 64px;
+    margin: 0 $main-margin-inline;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: calc(100% + $main-margin-inline * 2);
+        height: 91px;
+        left: 0;
+        right: 0;
+        top: 50%;
+        left: -$main-margin-inline;
+        background-color: $clr-light;
+   }
 }
 
 .shortening-container {
@@ -9,7 +23,9 @@
     margin: auto;
     max-width: 400px;
     background-color: $clr-dark-violet;
-    background-image: url("/src/assets/bg-shorten-desktop.svg");
+    background-image: url("/src/assets/bg-shorten-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
     border-radius: $border-radius-regular;
     flex-direction: column;
 
@@ -20,6 +36,39 @@
     
     .shortening__submit {
         padding: 16px;
-        background-color: $clr-cyan;
+    }
+}
+
+@media (min-width: $mq-tablet) {
+    .shortening {
+        margin: 0;
+        padding-inline: calc($main-margin-inline + 5vw);
+    }
+
+    .shortening-container {
+        max-width: none;
+        flex-direction: row;
+        padding: 48px;
+        background-image: url("/src/assets/bg-shorten-desktop.svg");
+        background-size: cover;
+
+        .shortening__input {
+            width: 100%;
+        }
+
+        .shortening__submit {
+            width: 200px;
+        }
+    }
+}
+
+@media(min-width: $mq-desktop) {
+    .shortening {
+        padding-inline: 0;
+    }
+    
+    .shortening > * {
+        max-width: $max-width-desktop;
+        margin-inline: auto;
     }
 }

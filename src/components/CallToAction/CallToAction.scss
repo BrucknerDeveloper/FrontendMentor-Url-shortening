@@ -1,0 +1,31 @@
+.cta {
+    background-image: url("/src/assets/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: $clr-dark-violet;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cta__title {
+    margin-bottom: 16px;
+}
+
+.cta__btn {
+    padding-inline: 44px;
+}
+
+@media (min-width: $mq-tablet) {
+    .cta {
+        min-height: 250px;
+        background-image: url("/src/assets/bg-boost-desktop.svg");
+        background-size: cover;
+    }
+
+    .cta__title {
+        font-size: 38px;
+    }
+}

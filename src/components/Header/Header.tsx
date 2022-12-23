@@ -6,13 +6,13 @@ import logo from "../../assets/logo.svg"
 import menu from "../../assets/menu.png"
 
 export default function Header() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768 ? true : false)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768 ? true : false)
     const [showMenu, setShowMenu] = useState(window.innerWidth >= 768 ? true : false)
 
     console.log(showMenu)
 
     function handleWindowSizeChange() {
-        setIsMobile(window.innerWidth <= 768 ? true : false)
+        setIsMobile(window.innerWidth < 768 ? true : false)
         setShowMenu(prev => window.innerWidth >= 768 ? true : prev)
     } 
 
@@ -40,7 +40,7 @@ export default function Header() {
                     <hr className="header__hr"/>
                     <div className="header__btn-container">
                         <button onClick={toggleShowMenu} className="btn--login bold">Login</button>
-                        <button onClick={toggleShowMenu} className="btn btn--round">Sign Up</button>
+                        <button onClick={toggleShowMenu} className="btn--signUp btn btn--round">Sign Up</button>
                     </div>
                 </div>
             }

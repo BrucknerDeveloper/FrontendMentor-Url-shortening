@@ -1,0 +1,39 @@
+.statistic {
+    background-color: $clr-white;
+    position: relative;
+    min-height: 250px;
+    max-width: 400px;
+    padding: 32px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.statistic__container {
+    background-color: $clr-dark-violet;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    //centering
+    position: absolute;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    transform: translateY(calc(-50% - 32px));
+
+    & .statistic__icon {
+
+    }
+}
+
+.statistic__title {
+    text-align: center;
+    margin-block: 32px 16px;
+}
+
+.statistic__description {
+    text-align: center;
+}

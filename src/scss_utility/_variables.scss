@@ -4,16 +4,27 @@ $clr-cyan: hsl(180, 66%, 49%);
 $clr-dark-violet: hsl(257, 27%, 26%);
 $clr-red: hsl(0, 87%, 67%);
 $clr-gray: hsl(0, 0%, 75%);
-$clr-grayish-violet: hsl(257, 7%, 63%);
+$clr-grayish-violet: hsl(258, 7%, 63%);
 $clr-veryDark-blue: hsl(255, 11%, 22%);
 $clr-veryDark-violet: hsl(260, 8%, 14%);
 $clr-white: hsl(0, 0%, 100%);
+$clr-light: hsl(230,25%,95%);
 
 //font-sizes
 $fs-h1: 2.5rem;
 $fs-h2: 1.5rem;
 $fs-h3: 1.25rem;
 $fs-regular: 1rem;
+
+//should have done it with regular css variables for updating with media queries
+// @media (min-width: 35em) {
+//     :root {
+//         $fs-h1: 44rem;
+//         $fs-h2: 23rem;
+//         $fs-h3: 13rem;
+//         $fs-regular: 12rem;
+//     }
+// }
 
 //font-family
 $ff-poppins: 'Poppins', sans-serif;
@@ -22,9 +33,18 @@ $ff-poppins: 'Poppins', sans-serif;
 $fw-500: 500;
 $fw-700:  700;
 
-//padding
-$main-padding-block: 32px;
-$main-padding-inline: 16px;
+//margin
+$main-margin-block: 32px;
+$main-margin-inline: 24px;
 
 //border-radius
 $border-radius-regular: 7px;
+
+//max-width (for larger screens)
+$max-width-desktop: 1300px;
+
+//media-queries 
+$mq-mobile: 480px;
+$mq-tablet: 768px;
+$mq-laptop: 1024px;
+$mq-desktop: 1440px;

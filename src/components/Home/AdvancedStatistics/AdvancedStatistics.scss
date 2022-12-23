@@ -1,0 +1,83 @@
+.statistics {
+    padding: 72px $main-margin-inline $main-margin-block;
+    background-color: $clr-light;
+}
+
+.statistics__title {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.statistics__text {
+    text-align: center;
+    margin-bottom: 96px;
+    max-width: 450px;
+    margin-inline: auto;
+}
+
+.statistics__container {
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    margin-bottom: 64px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border: 3px solid $clr-cyan;
+        height: 90%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: $mq-tablet) {
+    .statistics {
+        padding: 72px calc($main-margin-inline + 5vw) $main-margin-block;
+    }
+}
+
+@media (min-width: $mq-laptop) {
+    .statistics__title {
+        font-size: 32px;
+    }
+
+    .statistics__container {
+        flex-direction: row;
+        gap: min(5vw, 15px);
+
+        &::before {
+            height: 0;
+            left: 50px;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .statistic__title, .statistic__description {
+            text-align: left;
+        }    
+
+        & div:first-child {
+            margin-bottom: calc(75px); //icon height / 2
+        }
+
+        & div:last-child {
+            margin-top: calc(75px); //icon height / 2
+        }
+    }
+}
+
+//setting max-width for larger screens so design maxes out at some point and centering it.
+//Reason for using "> *" is background color on statistics
+@media(min-width: $mq-desktop) {
+    .statistics > * {
+        max-width: $max-width-desktop;
+        margin-inline: auto;
+    }
+
+    .statistics__text {
+        max-width: 450px;
+    }
+}

@@ -1,5 +1,5 @@
 .header {
-    padding: $main-padding-block $main-padding-inline 0;
+    padding: $main-margin-block $main-margin-inline 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,10 +13,10 @@
 .header__menu { 
     z-index: 100;
     position: absolute;
-    top: calc(80px);
+    top: 80px;
     width: auto;
-    left: 16px;
-    right: 16px;
+    left: $main-margin-inline;
+    right: $main-margin-inline;
     background-color: $clr-dark-violet;
     border-radius: $border-radius-regular;
     padding: 32px;
@@ -57,7 +57,64 @@
     filter: invert(50%);
 }
 
+@media (min-width: $mq-tablet) {
+    .header {
+        padding: calc($main-margin-block) calc($main-margin-inline + 5vw) 0;
+        justify-content:start;
+        position: static;
+        gap: 50px;
+    }
 
+    .header__menu { 
+        position: static;
+        width: 100%;
+        background-color: $clr-white;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    
+        & .header__nav {
+            flex-direction: row;
+            gap: 30px;   
+    
+            & .header__nav-item {
+                padding-bottom: 0px;
+                color: $clr-grayish-violet;
+
+                &:hover {
+                    color: $clr-veryDark-blue;
+                }
+            }
+        }
+    
+        & .header__hr {
+            display: none;
+        }
+    
+        & .header__btn-container {
+            flex-direction: row;
+            align-items: center;
+            
+            & .btn--login {
+                color: $clr-grayish-violet;
+                padding: 24px 16px;
+                background-color: $clr-white;
+
+                &:hover {
+                    color: $clr-veryDark-blue
+                }
+            }          
+        }       
+    }   
+}
+
+@media(min-width: $mq-desktop) {
+    .header {
+        max-width: $max-width-desktop;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+}
 
 
 

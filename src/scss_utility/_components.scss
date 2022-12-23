@@ -1,4 +1,5 @@
-//typography
+
+// --- MOBILE ---
 //color
 .text-white {
     color: $clr-white;
@@ -31,21 +32,10 @@
 
 .fs-h3 {
     font-size: $fs-h3;
-    letter-spacing: -1px;
 }
 
 .fs-regular {
     font-size: $fs-regular;    
-}
-
-//letter-spacing
-
-.letter-space-text {
-    letter-spacing: .5px;
-}
-
-.letter-space-title {
-    letter-spacing: -1px;
 }
 
 //buttons
@@ -65,3 +55,15 @@
 .btn--round {
     border-radius: 50px;
 }
+
+// --- TABLET ---
+@media(min-width: $mq-tablet) {
+    .fs-h1 {
+        font-size: 64px;
+    }
+
+    .btn:hover {
+        background-color: lighten($clr-cyan, 20%);
+    }
+}
+
