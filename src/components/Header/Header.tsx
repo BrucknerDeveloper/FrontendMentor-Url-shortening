@@ -1,31 +1,14 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import {Link}  from "react-router-dom"
+
+import {Context} from "../../context/context"
 
 //imgs
 import logo from "../../assets/logo.svg"
 import menu from "../../assets/menu.png"
 
 export default function Header() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768 ? true : false)
-    const [showMenu, setShowMenu] = useState(window.innerWidth >= 768 ? true : false)
-
-    console.log(showMenu)
-
-    function handleWindowSizeChange() {
-        setIsMobile(window.innerWidth < 768 ? true : false)
-        setShowMenu(prev => window.innerWidth >= 768 ? true : prev)
-    } 
-
-    function toggleShowMenu() {
-        if(isMobile)
-            setShowMenu(prev => !prev)
-        else
-            setShowMenu(true)
-    }
-
-    useEffect(() => {
-        window.addEventListener("resize", handleWindowSizeChange)
-    }, [])
+    const {isMobile, showMenu, toggleShowMenu}: any = useContext(Context)
 
     return (
         <header className="header">

@@ -24,13 +24,28 @@
     & .footer__title {
         margin-bottom: 5px;
     }
-}
 
+    & .footer__link {
+        cursor: pointer;
+    
+        &:hover {
+        color: $clr-cyan;
+        }
+    }
+}
 
 .footer__social-media {
     margin-top: 16px;
     display: flex;
     gap: 25px;
+    
+    & svg  {
+        cursor: pointer;
+
+        &:hover path{
+            fill: $clr-cyan;
+        }
+    }
 }
 
 @media(min-width: $mq-desktop) {
