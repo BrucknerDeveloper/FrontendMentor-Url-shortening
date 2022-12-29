@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-type LinkProps = {
+interface LinkProps {
     shortLink: string,
     originalLink: string
     key: number
@@ -13,7 +13,7 @@ export default function Link(props: LinkProps) {
         backgroundColor: btnText === "Copied!" && "hsl(257, 27%, 26%)"
     }
 
-    function copyToClipboard() {
+    function copyToClipboard(): void {
         navigator.clipboard.writeText(props.shortLink);
         setBtnText("Copied!")
     }

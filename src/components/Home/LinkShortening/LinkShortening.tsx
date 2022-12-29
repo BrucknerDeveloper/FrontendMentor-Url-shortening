@@ -1,25 +1,25 @@
 import React, { useState, useEffect, useContext, useRef } from "react"
 import Link from "./Link/Link"
 
-//Context
+//context
 import {Context} from "../../../context/context"
 
 export default function LinkShortening() {
     //states
-    const [newLink, setNewLink] = useState("")
-    const [shortenedLinks, setShortenedLinks]: any = useState([]) 
-    const [linksCount, setLinksCount] = useState(0)
-    const [validSubmit, setValidSubmit] = useState(true)
+    const [newLink, setNewLink] = useState<string>("")
+    const [shortenedLinks, setShortenedLinks] = useState<string[]>([]) 
+    const [linksCount, setLinksCount] = useState<number>(0)
+    const [validSubmit, setValidSubmit] = useState<boolean>(true)
 
     //context
-    const {isMobile}: any = useContext(Context)
+    const {isMobile} = useContext(Context)
 
     //refs
-    const invalidMessageRef = React.useRef<HTMLDivElement>(null) //typescript needs <HtMLDivElement> to work
-    const isMounted = useRef(false);
+    const invalidMessageRef = React.useRef<HTMLParagraphElement>(null) //typescript needs type for the ref to work
+    const isMounted = useRef<boolean>(false);
 
     //styles
-    const styles = {
+    const styles: {} = {
         border: validSubmit ? "3px solid transparent" : "3px solid hsl(0, 87%, 67%)",
         marginBottom: !validSubmit && isMobile && "20px",
     }
