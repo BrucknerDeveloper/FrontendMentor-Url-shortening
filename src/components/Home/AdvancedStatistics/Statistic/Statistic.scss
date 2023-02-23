@@ -23,9 +23,9 @@
     left: 0;
     right: 0;
     transform: translateY(calc(-50% - 32px));
+    
 
     & .statistic__icon {
-
     }
 }
 
@@ -36,4 +36,10 @@
 
 .statistic__description {
     text-align: center;
+}
+
+@media(min-width: $mq-laptop) {
+    .statistic__container {
+        margin-inline: 32px;
+    }
 }
